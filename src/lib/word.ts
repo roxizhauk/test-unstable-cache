@@ -9,7 +9,8 @@ export const getWords = unstable_cache(
       columns: { word: true, num: true },
       orderBy: ({ num }, { desc }) => [desc(num)],
     }),
-  ["words"],
+  [],
+  { tags: ["words"] },
 );
 
 export const revalidate = () => {
