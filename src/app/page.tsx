@@ -8,7 +8,7 @@ export default async function Home() {
     "https://my-next-lab.vercel.app//api/words",
   ).then((res) => res.json());
 
-  if (!options) return <>Loading...</>;
+  if (!options) return <>Loading....</>;
   return (
     <>
       <div className="grid grid-cols-2 gap-2">
