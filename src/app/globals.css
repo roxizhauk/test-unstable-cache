@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply h-full overscroll-none bg-green-300;
+    @apply h-full overscroll-none;
   }
 
   main {
-    @apply mx-auto h-full min-h-screen max-w-2xl bg-green-300 p-2;
+    @apply mx-auto h-full min-h-screen max-w-2xl p-2;
   }
 }

@@ -1,15 +1,20 @@
 import { Fragment } from "react";
-import { getWords } from "@/lib/word";
+// import { getWords } from "@/lib/word";
 
+export const dynamic = "force-dynamic";
 export default async function Home() {
-  const options = await getWords();
+  // const options = await getWords();
+  const options: { word: string; num: number }[] = await fetch("/api/words").then((res) =>
+    res.json(),
+  );
 
+  if (!options) return <>Loading...</>;
   return (
     <>
       <div className="grid grid-cols-2 gap-2">
         {options.map(({ word, num }) => (
           <Fragment key={word + num}>
-            <div className="rounded border-2 border-purple-400 bg-pink-400 p-1">{num}</div>
+            <div>{num}</div>
             <div>{word}</div>
           </Fragment>
         ))}

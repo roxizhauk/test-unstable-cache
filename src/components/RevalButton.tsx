@@ -2,7 +2,7 @@
 
 import { revalidate } from "@/lib/word";
 
-export default function Button() {
+export default function RevalButton() {
   return (
     <button
       onClick={() => {
