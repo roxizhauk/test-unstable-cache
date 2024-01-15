@@ -9,14 +9,16 @@ export default async function Home() {
 
   return (
     <>
-      <div>LIST</div>
-      <div className="grid grid-cols-2 gap-2">
-        {options.map(({ word, num }) => (
-          <Fragment key={word + num}>
-            <div>{num}</div>
-            <div>{word}</div>
-          </Fragment>
-        ))}
+      <div className="flex flex-col gap-2">
+        <div>List</div>
+        <div className="grid grid-cols-2 gap-2">
+          {options.map(({ word, num }) => (
+            <Fragment key={word + num}>
+              <div>{num}</div>
+              <div>{word}</div>
+            </Fragment>
+          ))}
+        </div>
       </div>
     </>
   );
