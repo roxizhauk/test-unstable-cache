@@ -13,11 +13,11 @@ export const getWords = unstable_cache(
   { tags: ["words"] },
 );
 
-export const getWordsAsc = async () =>
-  await db.query.words.findMany({
-    columns: { word: true, num: true },
-    orderBy: ({ num }, { asc }) => [asc(num)],
-  });
+// export const getWordsAsc = async () =>
+//   await db.query.words.findMany({
+//     columns: { word: true, num: true },
+//     orderBy: ({ num }, { asc }) => [asc(num)],
+//   });
 
 export const revalidate = () => {
   revalidateTag("words");
