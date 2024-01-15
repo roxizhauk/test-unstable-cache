@@ -1,7 +1,5 @@
-"use server";
-
 import { db } from "@/db";
-import { unstable_cache, revalidateTag } from "next/cache";
+import { unstable_cache } from "next/cache";
 
 export const getWords = unstable_cache(
   async () =>
@@ -12,13 +10,3 @@ export const getWords = unstable_cache(
   [],
   { tags: ["words"] },
 );
-
-// export const getWordsAsc = async () =>
-//   await db.query.words.findMany({
-//     columns: { word: true, num: true },
-//     orderBy: ({ num }, { asc }) => [asc(num)],
-//   });
-
-export const revalidate = () => {
-  revalidateTag("words");
-};
