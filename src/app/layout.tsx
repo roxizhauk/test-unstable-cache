@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "myNextLab",
-  description: "This is a lab to test React components and hooks",
+  title: "unstable_cache",
+  description: "To test unstable_cache",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

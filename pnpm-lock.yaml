@@ -10,7 +10,7 @@ dependencies:
     version: 1.13.0
   drizzle-orm:
     specifier: ^0.29.3
-    version: 0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.7.0)(postgres@3.4.3)(react@18.2.0)
+    version: 0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.7.0)(react@18.2.0)
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -20,9 +20,6 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
-  swr:
-    specifier: ^2.2.4
-    version: 2.2.4(react@18.2.0)
 
 devDependencies:
   '@types/node':
@@ -58,9 +55,6 @@ devDependencies:
   postcss:
     specifier: ^8.4.33
     version: 8.4.33
-  postgres:
-    specifier: ^3.4.3
-    version: 3.4.3
   prettier:
     specifier: ^3.2.2
     version: 3.2.2
@@ -1315,7 +1309,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.7.0)(postgres@3.4.3)(react@18.2.0):
+  /drizzle-orm@0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.7.0)(react@18.2.0):
     resolution: {integrity: sha512-uSE027csliGSGYD0pqtM+SAQATMREb3eSM/U8s6r+Y0RFwTKwftnwwSkqx3oS65UBgqDOM0gMTl5UGNpt6lW0A==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1389,7 +1383,6 @@ packages:
       '@planetscale/database': 1.13.0
       '@types/react': 18.2.47
       mysql2: 3.7.0
-      postgres: 3.4.3
       react: 18.2.0
     dev: false
 
@@ -2953,10 +2946,6 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /postgres@3.4.3:
-    resolution: {integrity: sha512-iHJn4+M9vbTdHSdDzNkC0crHq+1CUdFhx+YqCE+SqWxPjm+Zu63jq7yZborOBF64c8pc58O5uMudyL1FQcHacA==}
-    engines: {node: '>=12'}
-
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -3363,16 +3352,6 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /swr@2.2.4(react@18.2.0):
-    resolution: {integrity: sha512-njiZ/4RiIhoOlAaLYDqwz5qH/KZXVilRLvomrx83HjzCWTfa+InyfAjv05PSFxnmLzZkNO9ZfvgoqzAaEI4sGQ==}
-    peerDependencies:
-      react: ^16.11.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      client-only: 0.0.1
-      react: 18.2.0
-      use-sync-external-store: 1.2.0(react@18.2.0)
-    dev: false
-
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
     engines: {node: '>=14.0.0'}
@@ -3570,14 +3549,6 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
-
-  /use-sync-external-store@1.2.0(react@18.2.0):
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
