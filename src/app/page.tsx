@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <>
-      <div>List</div>
+      <div>LIST</div>
       <div className="grid grid-cols-2 gap-2">
         {options.map(({ word, num }) => (
           <Fragment key={word + num}>
