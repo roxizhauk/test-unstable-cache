@@ -1,25 +1,43 @@
 {
-  "name": "my-react-lab",
+  "name": "my-next-lab",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "remove": "rm -rf .next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "test": "rm -rf .next && next build && next start",
+    "update": "npx npm-check-updates -u && pnpm install",
+    "generate": "drizzle-kit generate:mysql",
+    "migrate": "tsx src/db/migrate.ts",
+    "push": "drizzle-kit push:mysql"
   },
   "dependencies": {
-    "@types/node": "20.4.9",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.13",
-    "next": "13.4.13",
-    "postcss": "8.4.27",
+    "@planetscale/database": "^1.13.0",
+    "drizzle-orm": "^0.29.3",
+    "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "swr": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.20.12",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "mysql2": "^3.7.0",
+    "postcss": "^8.4.33",
+    "postgres": "^3.4.3",
+    "prettier": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   }
 }
