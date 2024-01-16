@@ -12,7 +12,7 @@ export default async function Home() {
               key={word + num}
               className="flex items-center gap-2 rounded-lg border border-slate-200 p-1"
             >
-              <div className="w-8 place-items-center rounded-xl border border-slate-200 p-1 font-mono text-sm">
+              <div className="w-8 justify-items-center rounded-xl border border-slate-200 p-1 font-mono text-sm">
                 {num}
               </div>
               <div>{word}</div>
