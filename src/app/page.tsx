@@ -1,22 +1,19 @@
-import { Fragment } from "react";
 import { getWords } from "@/lib/word";
 
 export default async function Home() {
   const options = await getWords();
-  // const options: { word: string; num: number }[] = await fetch(
-  //   "https://my-next-lab.vercel.app//api/words",
-  // ).then((res) => res.json());
 
   return (
     <>
-      <div className="flex flex-col gap-2">
-        <div>LIST</div>
-        <div className="grid grid-cols-2 gap-2">
+      <div className="rounded-2xl bg-white p-4 drop-shadow-2xl">
+        <div className="flex flex-col gap-3 rounded-xl border-2 border-slate-300 p-3">
           {options.map(({ word, num }) => (
-            <Fragment key={word + num}>
-              <div>{num}</div>
+            <div key={word + num} className="flex gap-2 rounded-lg border border-slate-200 p-1">
+              <div className="rounded-xl border border-slate-200 p-1 font-mono text-sm">
+                {num}
+              </div>
               <div>{word}</div>
-            </Fragment>
+            </div>
           ))}
         </div>
       </div>
