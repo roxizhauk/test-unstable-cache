@@ -18,6 +18,7 @@ export default async function Home() {
               <div>{word}</div>
             </div>
           ))}
+          <div>..</div>
         </div>
       </div>
     </>
